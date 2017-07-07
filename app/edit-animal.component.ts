@@ -1,5 +1,5 @@
 import { Component, Input,Output, EventEmitter} from '@angular/core';
-import { Course } from './course.model';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'edit-animal',
