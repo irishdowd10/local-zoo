@@ -13,7 +13,7 @@ This is a web application that will allow users to log newly admitted animals ba
 |View all animals |"All Animals"| Arctic Fox","Moon" 1,"Carnivore","Northern Trail",5,"Female""Cool shade","Loud noises"|
 |View animals Under 2 | Animals Under 2| Arctic Fox","Moon" 1,"Carnivore","Northern Trail",5,"Female""Cool shade","Loud noises |
 |View animals 2 & Older | Animals 2 & Older |"Ocelot","Prince",4,"Carnivore"
-Location: "Tropical Rain Forest Building", 6,"Male","Laying in the sunshine","Toys that are not rope-based"|
+"Tropical Rain Forest Building", 6,"Male","Laying in the sunshine","Toys that are not rope-based"|
 | Log newly admitted animal by submitting a form | species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike | Arctic Fox","Moon" 1,"Carnivore","Northern Trail",5,"Female""Cool shade","Loud noises |
 | Edit and animal on click | name, age or caretakers | "Moon" change to "Sun", "1" change to "2", "5" change to "6" |
 
