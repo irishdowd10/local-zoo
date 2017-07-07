@@ -9,9 +9,34 @@ import { Animal } from './animal.model';
       <option value="animalsYoung">Animals Young Under 2</option>
       <option value="animalsMature">Animals Mature 2 and Older </option>
     </select>
-    <ul>
-      <li [class]="priorityColor(currentAnimal)" *ngFor="let currentAnimal of (childAnimalList | maturity:currentSelectedAge)">{{currentAnimal.species}} | {{currentAnimal.name}} | {{currentAnimal.diet}} | {{currentAnimal.location}} | {{currentAnimal.caretakers}} | {{currentAnimal.sex}} | {{currentAnimal.likes}} | {{currentAnimal.dislikes}} <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></li>
-    </ul>
+    <br><br>
+
+  <table id="table">
+    <tr>
+      <th>Species</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Diet</th>
+      <th>Location</th>
+      <th>Caretakers</th>
+      <th>Sex</th>
+      <th>Likes</th>
+      <th>Dislikes</th>
+      <th>Edit</th>
+    </tr>
+
+      <tr [class]="priorityColor(currentAnimal)" *ngFor="let currentAnimal of (childAnimalList | maturity:currentSelectedAge)">
+      <td>{{currentAnimal.species}}</td>
+      <td>{{currentAnimal.name}}</td>
+      <td>{{currentAnimal.age}}</td>
+      <td>{{currentAnimal.diet}}</td>
+      <td>{{currentAnimal.location}}</td>
+      <td>{{currentAnimal.caretakers}}</td>
+      <td>{{currentAnimal.sex}}</td>
+      <td>{{currentAnimal.likes}}</td>
+      <td>{{currentAnimal.dislikes}}</td>
+      <td><button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></td>
+    </table>
   `
 })
 

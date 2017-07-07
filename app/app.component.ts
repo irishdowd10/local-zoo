@@ -6,7 +6,10 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="container">
-  <h1> Local Zoo Animals for {{month}}/{{day}}/{{year}}</h1>
+   <div class="jumbotron">
+    <h1> Local Zoo Animals</h1>
+    <h3>Date: {{month}}/{{day}}/{{year}}</h3>
+  </div>
   <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
   <hr>
   <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
