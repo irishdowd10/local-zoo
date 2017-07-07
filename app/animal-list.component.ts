@@ -10,20 +10,26 @@ import { Animal } from './animal.model';
       <option value="animalsMature">Animals Mature 2 and Older </option>
     </select>
     <ul>
-      <li [class]="priorityColor(currentAnimal)" *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.species}} | {{currentAnimal.name}} | {{currentAnimal.diet}} | {{currentAnimal.diet}} | {{currentAnimal.location}} | {{currentAnimal.caretakers}} | {{currentAnimal.sex}} | {{currentAnimal.likes}} | {{currentAnimal.dislikes}} <button (click)="editButtonhasBeenClicked(currentAnimal)">Edit</button></li>
+      <li [class]="priorityColor(currentAnimal)" *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.species}} | {{currentAnimal.name}} | {{currentAnimal.diet}} | {{currentAnimal.location}} | {{currentAnimal.caretakers}} | {{currentAnimal.sex}} | {{currentAnimal.likes}} | {{currentAnimal.dislikes}} <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></li>
     </ul>
   `
 })
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
+  @Output() clickSender = new EventEmitter();
 
+  editButtonHasBeenClicked(animalToEdit: Animal) {
+    this.clickSender.emit(animalToEdit);
+  }
 
   priorityColor(currentAnimal) {
     if (currentAnimal.age === 1) {
       return "bg-danger";
-    } else {
+    } else if (currentAnimal.age === 2) {
       return "bg-warning";
+    } else {
+      return "bg-info";
     }
   }
 
