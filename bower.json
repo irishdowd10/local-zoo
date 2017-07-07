@@ -1,0 +1,21 @@
+
+{
+  "name": "local-zoo",
+  "description": "track animals",
+  "main": "",
+  "authors": [
+    "John Dowd <john.dowd@inspectall.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "boostrap#^3.3.7"
+  }
+}
