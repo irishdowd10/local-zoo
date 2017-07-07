@@ -4,9 +4,9 @@ import { Animal } from './animal.model';
 @Component ({
   selector: 'new-animal',
   template: `
-<h1> New Animal </h1>
+<h3> New Animal </h3>
 <div>
-  <h3>Enter Animal Information</h3>
+  <h4>Enter Animal Information</h4>
   <form>
     <label>Species</label>
     <input required #newSpecies>

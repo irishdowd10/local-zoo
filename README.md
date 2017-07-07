@@ -32,6 +32,7 @@ If you have any issues or have questions, ideas, concerns, or contributions plea
 
 * Javascript
 * Angular2
+* TypeScript
 * JSON
 * HTML
 * CSS
