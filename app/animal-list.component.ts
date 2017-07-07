@@ -59,14 +59,7 @@ export class AnimalListComponent {
   }
 
 
-  onChange(optionFromMenu) {
-    // this.filterByMaturity = optionFromMenu;
-  }
-
   filterByAgeSelected(selectedAge) {
     this.currentSelectedAge = selectedAge;
-    // this.desiredMaturity = selectedAge <- passed into pipe
-    // clickedCourse.haveRun = Status;
-  }
-
+}
 }

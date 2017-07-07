@@ -13,13 +13,13 @@ import { Animal } from './animal.model';
     <label>Name</label>
     <input required #newName>
     <label>Age</label>
-    <input required #newAge>
+    <input required type="number" #newAge>
     <label>Diet</label>
     <input required #newDiet>
     <label>Location</label>
     <input required #newLocation>
     <label>Caretakers</label>
-    <input required #newCaretakers>
+    <input required type="number" #newCaretakers>
     <label>Sex</label>
     <input required #newSex>
     <label>Likes</label>
@@ -39,7 +39,12 @@ export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
 
   submitForm(species: string, name: string, age: number, diet: string,location: string,  caretakers: number, sex: string, likes: string, dislikes: string){
-    if(species != '' && name != '') {
+    console.log(age);
+    if(species != '' &&
+    name != '' &&
+    age.toString() != '' &&
+    diet != '' &&
+    location !='' && caretakers.toString() != '' && sex != '' && likes != '' &&  dislikes != '') {
       var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
       this.newAnimalSender.emit(newAnimalToAdd);
     }
